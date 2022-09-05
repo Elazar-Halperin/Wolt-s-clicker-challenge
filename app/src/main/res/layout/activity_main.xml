@@ -24,38 +24,60 @@
             android:layout_margin="16dp"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_root"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            app:cardCornerRadius="100000dp"
             app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="100000dp"
             app:cardElevation="10dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="100000dp"
+                android:layout_margin="10dp"
                 app:cardBackgroundColor="#0064a9"
-                app:cardElevation="0dp"
-                android:layout_margin="10dp">
+                app:cardCornerRadius="100000dp"
+                app:cardElevation="0dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_box"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="100000dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardElevation="0dp"
                     android:layout_margin="15dp"
-                    android:clickable="true">
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="100000dp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:id="@+id/tv_counter"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="64sp"
-                        android:textColor="@color/gray_text_color"
+                        android:gravity="center"
                         android:text="Tap"
-                        android:gravity="center"/>
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="64sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_box2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="100000dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Start!"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="64sp"
+                        android:visibility="visible" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -64,13 +86,14 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/tv_bestRecord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
             android:text="Your best record: 40"
             android:textColor="@color/fade_white"
-            android:textSize="32sp"
-            android:gravity="center"
-            android:layout_margin="16dp"/>
+            android:textSize="32sp" />
     </LinearLayout>
 
 </LinearLayout>
